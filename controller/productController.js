@@ -234,7 +234,7 @@ const createProduct = async (req, res) => {
         Body: req.files[i].buffer,
         ContentType: req.files[i].mimetype,
       };
-        console.log("Params", params);
+      
       const command = new PutObjectCommand(params);
       await s3.send(command);
       images.push(
@@ -290,7 +290,7 @@ const updateProduct = async (req, res) => {
         // delete all old images
         for (let i = 0; i < product.images.length; i++) {
           let imageFileName = product.images[i].split(
-            "https://d2c0vv5h4nuw6w.cloudfront.net/images/"
+            "https://ecommerce-files-347.s3.ap-southeast-1.amazonaws.com/images/"
           )[1];
           const params = {
             Bucket: process.env.AWS_BUCKET_NAME,
@@ -316,7 +316,8 @@ const updateProduct = async (req, res) => {
           const command = new PutObjectCommand(params);
           await s3.send(command);
           images.push(
-            "https://d2c0vv5h4nuw6w.cloudfront.net/images/" + imageName
+            "https://ecommerce-files-347.s3.ap-southeast-1.amazonaws.com/images/" +
+              imageName
           );
         }
       }
