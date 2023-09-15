@@ -20,8 +20,9 @@ const server = express();
 const allowedOrigins = [
   // "http://127.0.0.1:3000",
   "http://localhost:3000",
-  "https://checkout.stripe.com",  
+  "https://checkout.stripe.com",
   "http://103.147.106.150:5000/stripe/webhook",
+  "http://103.147.106.150:3000",
 ];
 
 server.use(cors({ origin: allowedOrigins }));

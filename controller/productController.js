@@ -191,7 +191,7 @@ const deleteProductById = async (req, res) => {
       // first delete img in AWS
       for (let i = 0; i < products.images.length; i++) {
         let imageFileName = products.images[i].split(
-          "https://d2c0vv5h4nuw6w.cloudfront.net/images/"
+          "https://ecommerce-files-347.s3.ap-southeast-1.amazonaws.com/images/"
         )[1];
         const params = {
           Bucket: process.env.AWS_BUCKET_NAME,
