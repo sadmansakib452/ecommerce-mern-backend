@@ -46,7 +46,7 @@ if (process.env.MODE === "production") {
   });
 }
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
   connectDB();
   console.log(`Server Running on port ${PORT}`);
