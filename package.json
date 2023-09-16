@@ -6,10 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "start:dev": "nodemon server",
-    "data:import": "node seeder",
-    "data:destroy": "node seeder -d",
-    "build": "cd frontend && npm install && npm run build"
+    "start:dev": "nodemon server"
   },
   "author": "Haopeng Zeng",
   "license": "ISC",
