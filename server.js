@@ -23,6 +23,7 @@ const allowedOrigins = [
   "https://checkout.stripe.com",
   "http://103.147.106.150:5000/stripe/webhook",
   "http://103.147.106.150:3000",
+  "https://zesty-scone-3dc968.netlify.app",
 ];
 
 server.use(cors({ origin: allowedOrigins }));
